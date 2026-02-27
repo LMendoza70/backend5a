@@ -12,7 +12,7 @@ export const detGrupoById = async (id) => {
 
 export const createGrupo = async ({ nombre_grupo,descripcion,activo }) => {
   const [result] = await db.query(
-    'INSERT INTO grupos (nombre_grupo, decripcion, activo) VALUES (?,?,?)',
+    'INSERT INTO grupos (nombre_grupo, descripcion, activo) VALUES (?,?,?)',
     [nombre_grupo, descripcion||null, activo||null]
   );
   return { id: result.insertId, nombre_grupo, descripcion, activo };
