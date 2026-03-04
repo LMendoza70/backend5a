@@ -15,7 +15,7 @@ app.use(express.json())
 app.use('/api/grupos',gruposRutas)
 
 app.get('/',(req,res)=>{
-    res.send("Esto es mi primer API... v1.0001")
+    res.send("Esto es mi primer API... v1.0001 y ya la publique.....")
 })
 
 app.listen(port,()=>{
