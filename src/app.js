@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import gruposRutas from './routes/grupos.routes.js';
+import authRutas from './routes/auth.routes.js';
 
 dotenv.config()
 
@@ -13,6 +14,7 @@ app.use(express.json())
 
 //rutas
 app.use('/api/grupos',gruposRutas)
+app.use('/api/auth',authRutas)
 
 app.get('/',(req,res)=>{
     res.send("Esto es mi primer API... v1.0001 y ya la publique.....")

@@ -1,4 +1,4 @@
-import db from '../config/DB.js'
+import db from '../config/db.js'
 
 export const getAllGrupos = async ()=>{
     const [rows]= await db.query('SELECT * FROM grupos WHERE activo=1')
